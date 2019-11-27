@@ -1,7 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+<category>
+<pattern>HELLO</pattern>
+<template><srai>HI</srai></template>
+</category>
+<category>
+<pattern>HI THERE</pattern>
+<template><srai>HI</srai></template>
+</category>
+<category>
+<pattern>HOWDY</pattern>
+<template><srai>HI</srai></template>
+</category>
+<category>
+<pattern>HI</pattern>
+<template>Hello world!</template>
+</category>
+<category>
+<pattern>WHO ARE YOU</pattern>
+<template>I am a bot.<br/> I live in a computer.
+</template>
+</category>
+<category>
+<pattern>MY NAME IS *</pattern>
+<template>Nice to meet you, <set name="name"><star/></set></template>
+</category>
+<category>
+<pattern>WHAT IS MY NAME</pattern>
+<template>Your name is <get name="name"/>.</template>
+</category>
+<category>
+<pattern>MY NAME IS * AND I AM * YEARS OLD</pattern>
+<template>Hi <star/>. I am also <star index="2"/> years old!</template>
+</category>
+<category>
+    <pattern>WHAT IS YOUR NAME</pattern>
+    <template>HC</template>
+</category>
+<category>
+<pattern>HOW ARE YOU</pattern>
+<template>I am fine</template>
+</category>
+<category>
+<pattern>HOW R U</pattern>
+<template><srai>HOW ARE YOU</srai></template>
+</category>
+<category>
+<pattern>IS YOUR FATHER DEAD</pattern>
+<template>I don't have a father.</template>
+</category>
+<category>
+<pattern>_ DAD *</pattern>
+<template><srai><star/> FATHER <star index="2"/></srai></template>
+</category>
+
+    <category>
+        <pattern>ä»å¤©å¤©æ°£æºå¥½</pattern>
+        <template>æ¯åï¼æéè£¡ä¸é¨äºãè¦æ¯æ²ä¸é¨ï¼æå°±åºå»ç©äºï¼</template>
+    </category>
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>
+        <random>
+            <li>What was that?</li>
+            <li>I donât understand</li>
+            <li>Can you say that more clearly?</li>
+        </random>
+    </template>
   </category>
 </aiml>
